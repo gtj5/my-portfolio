@@ -22,6 +22,26 @@
             height: 100vh;
         }
         
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            
+            .image-side, .text-side {
+                width: 100%;
+                padding: 2rem;
+            }
+            
+            .image-side {
+                height: 40vh;
+            }
+            
+            h1 {
+                font-size: 2rem;
+                margin-bottom: 2rem;
+            }
+        }
+        
         .image-side {
             width: 50%;
             display: flex;
@@ -80,32 +100,36 @@
         </div>
         
         <div class="text-side">
-            <h2>John Smith</h2>
+            <h1>John Smith</h1>
             
             <div class="project" 
                  onmouseenter="changeImage('https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&h=800&fit=crop')"
-                 onmouseleave="resetImage()">
+                 onmouseleave="resetImage()"
+                 onclick="changeImage('https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&h=800&fit=crop')">
                 <h2>Web Development</h2>
                 <p>Building responsive and modern websites using the latest technologies. From concept to deployment, I create seamless user experiences.</p>
             </div>
             
             <div class="project"
                  onmouseenter="changeImage('https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=800&fit=crop')"
-                 onmouseleave="resetImage()">
+                 onmouseleave="resetImage()"
+                 onclick="changeImage('https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=800&fit=crop')">
                 <h2>UI/UX Design</h2>
                 <p>Crafting intuitive interfaces that users love. My design philosophy centers on simplicity and accessibility.</p>
             </div>
             
             <div class="project"
                  onmouseenter="changeImage('https://images.unsplash.com/photo-1626785774573-4b799315345d?w=800&h=800&fit=crop')"
-                 onmouseleave="resetImage()">
+                 onmouseleave="resetImage()"
+                 onclick="changeImage('https://images.unsplash.com/photo-1626785774573-4b799315345d?w=800&h=800&fit=crop')">
                 <h2>Brand Identity</h2>
                 <p>Creating cohesive visual identities that tell your story. From logos to complete brand guidelines.</p>
             </div>
             
             <div class="project"
                  onmouseenter="changeImage('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=800&fit=crop')"
-                 onmouseleave="resetImage()">
+                 onmouseleave="resetImage()"
+                 onclick="changeImage('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=800&fit=crop')">
                 <h2>Digital Marketing</h2>
                 <p>Strategic campaigns that convert. I combine analytics with creativity to drive measurable results.</p>
             </div>
