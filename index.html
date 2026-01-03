@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Georgia, serif;
+            background: white;
+            color: #333;
+        }
+        
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+        
+        .image-side {
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4rem;
+        }
+        
+        .image-side img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 0.5s;
+        }
+        
+        .text-side {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 4rem;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 4rem;
+        }
+        
+        .project {
+            margin-bottom: 2rem;
+            cursor: pointer;
+        }
+        
+        .project h2 {
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-bottom: 0.5rem;
+        }
+        
+        .project p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .contact {
+            margin-top: 4rem;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image-side">
+            <img id="portfolio-image" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=800&fit=crop" alt="Portfolio">
+        </div>
+        
+        <div class="text-side">
+            <h1>John Smith</h1>
+            
+            <div class="project" 
+                 onmouseenter="changeImage('https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&h=800&fit=crop')"
+                 onmouseleave="resetImage()">
+                <h2>Web Development</h2>
+                <p>Building responsive and modern websites using the latest technologies. From concept to deployment, I create seamless user experiences.</p>
+            </div>
+            
+            <div class="project"
+                 onmouseenter="changeImage('https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=800&fit=crop')"
+                 onmouseleave="resetImage()">
+                <h2>UI/UX Design</h2>
+                <p>Crafting intuitive interfaces that users love. My design philosophy centers on simplicity and accessibility.</p>
+            </div>
+            
+            <div class="project"
+                 onmouseenter="changeImage('https://images.unsplash.com/photo-1626785774573-4b799315345d?w=800&h=800&fit=crop')"
+                 onmouseleave="resetImage()">
+                <h2>Brand Identity</h2>
+                <p>Creating cohesive visual identities that tell your story. From logos to complete brand guidelines.</p>
+            </div>
+            
+            <div class="project"
+                 onmouseenter="changeImage('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=800&fit=crop')"
+                 onmouseleave="resetImage()">
+                <h2>Digital Marketing</h2>
+                <p>Strategic campaigns that convert. I combine analytics with creativity to drive measurable results.</p>
+            </div>
+            
+            <div class="contact">
+                <p>contact@example.com</p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        const defaultImage = 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=800&fit=crop';
+        const img = document.getElementById('portfolio-image');
+        
+        function changeImage(url) {
+            img.src = url;
+        }
+        
+        function resetImage() {
+            img.src = defaultImage;
+        }
+    </script>
+</body>
+</html>
